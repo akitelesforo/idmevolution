@@ -1,0 +1,34 @@
+<mat-toolbar class="bg-dark">
+  <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon class="c-white">menu</mat-icon>
+      </button>
+  </div>
+  <div fxLayoutAlign.xs="center" fxFlex.xs="100%">
+      <img routerLink="/home" src="assets/images/open-identity.png" width="50" ngClass.gt-xs="header-image">
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="space-around" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items c-white">
+        <li>
+          <button mat-button routerLink="/client">Clients</button>
+        </li>
+        <li>
+          <button mat-button routerLink="/account">Accounts</button>
+        </li>
+        <li>
+          <button mat-button routerLink="/account/register">API Resources</button>
+        </li>
+        <li>
+          <button mat-button routerLink="/account">Identity Resources</button>
+        </li>
+      </ul>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" class="c-white">
+    <button mat-button [matMenuTriggerFor]="beforeMenu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item (click)="signout()">Signout</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

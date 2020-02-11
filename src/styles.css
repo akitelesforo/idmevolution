@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* for sidenav to take whole page */
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.c-white {
+  color: white !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mat-header-cell-center {
+  flex-direction: column !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.mat-cell-center {
+  flex-direction: column !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
