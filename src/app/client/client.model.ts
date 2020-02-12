@@ -1,5 +1,18 @@
+export class ClientViewModel {
+  id: number;
+  enabled: boolean;
+  clientId: string;
+  clientName: string;
+  clientUri: string;
+
+  deserialize(input: any): this {
+    return Object.assign(this, input);
+  }
+
+}
+
 export class ClientModel {
-  // id: number;
+  id: number;
   enabled: boolean;
   clientId: string;
   // protocolType = 'oidc';
@@ -52,8 +65,8 @@ export class ClientModel {
   // int DeviceCodeLifetime = 300;
   // bool NonEditable
 
-  // deserialize(input: any): this {
-  //   return Object.assign(this, input);
-  // }
+  deserialize(input: any): this {
+    return Object.assign(this, input);
+  }
 
 }
