@@ -1,3 +1,7 @@
 table {
   width: 100%;
 }
+
+/deep/.mat-card-header-text {
+  width: 100% !important;
+}
